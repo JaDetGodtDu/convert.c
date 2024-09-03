@@ -7,7 +7,8 @@ void display_temperature_menu() {
     printf("1. Celsius to Fahrenheit\n");
     printf("2. Fahrenheit to Celsius\n");
     printf("3. Celsius to Kelvin\n");
-    printf("4. Back to Main Menu\n");
+    printf("4. Kelvin to Celsius\n");
+    printf("5. Back to Main Menu\n");
 }
 void celsius_to_fahrenheit_menu(){
     printf("===================================\n");
@@ -26,4 +27,10 @@ void celsius_to_kelvin_menu(){
     printf("Celsius to Kelvin Conversion\n");
     printf("===================================\n\n");
     printf("Please enter the number of degrees in Celsius: ");
+}
+void kelvin_to_celsius_menu(){
+    printf("===================================\n");
+    printf("Kelvin to Celsius Conversion\n");
+    printf("===================================\n\n");
+    printf("Please enter the number of degrees in Kelvin: ");
 }
