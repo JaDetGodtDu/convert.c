@@ -10,6 +10,8 @@ float kelvin_to_celsius(float kelvin);
 void temperature_main(){
     int choice;
     float celsius;
+    float fahrenheit;
+    float kelvin;
     do {
         display_temperature_menu();
 
@@ -23,7 +25,7 @@ void temperature_main(){
                 break;
             case 2:
                 fahrenheit_to_celsius_menu();
-                float fahrenheit = get_value();
+                fahrenheit = get_value();
                 printf("\n%.2f degrees Fahrenheit is equal to \033[4m%.2f\033[0m degrees Celsius.\n\n", fahrenheit, fahrenheit_to_celsius(fahrenheit));
                 break;
             case 3:
@@ -33,7 +35,7 @@ void temperature_main(){
                 break;
             case 4:
                 kelvin_to_celsius_menu();
-                float kelvin = get_value();
+                kelvin = get_value();
                 printf("\n%.2f Kelvin is equal to \033[4m%.2f\033[0m degrees Celsius.\n\n", kelvin, kelvin_to_celsius(kelvin));
                 break;
             case 5:

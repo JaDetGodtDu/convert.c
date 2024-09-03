@@ -9,6 +9,10 @@ float meters_to_feet(float meters);
 
 void distance_main(){
     int choice;
+    float miles;
+    float kilometers;
+    float feet;
+    float meters;
     do {
         display_distance_menu();
 
@@ -17,22 +21,22 @@ void distance_main(){
         switch(choice) {
             case 1:
                 miles_to_kilometers_menu();
-                float miles = get_value();
+                miles = get_value();
                 printf("\n%.2f miles is equal to \033[4m%.2f\033[0m kilometers.\n\n", miles, miles_to_kilometers(miles));
                 break;
             case 2:
                 kilometers_to_miles_menu();
-                float kilometers = get_value();
+                kilometers = get_value();
                 printf("\n%.2f kilometers is equal to \033[4m%.2f\033[0m miles.\n\n", kilometers, kilometers_to_miles(kilometers));
                 break;
             case 3:
                 feet_to_meters_menu();
-                float feet = get_value();
+                feet = get_value();
                 printf("\n%.2f feet is equal to \033[4m%.2f\033[0m meters.\n\n", feet, feet_to_meters(feet));
                 break;
             case 4:
                 meters_to_feet_menu();
-                float meters = get_value();
+                meters = get_value();
                 printf("\n%.2f meters is equal to \033[4m%.2f\033[0m feet.\n\n", meters, meters_to_feet(meters));
                 break;
             case 5:
