@@ -17,17 +17,17 @@ void weight_main(){
             case 1:
                 pounds_to_kilograms_menu();
                 float pounds = get_value();
-                printf("%.2f pounds is equal to %.2f kilograms.\n\n", pounds, pounds_to_kilograms(pounds));
+                printf("\n%.2f pounds is equal to %.2f kilograms.\n\n", pounds, pounds_to_kilograms(pounds));
                 break;
             case 2:
                 kilograms_to_pounds_menu();
                 float kilograms = get_value();
-                printf("%.2f kilograms is equal to %.2f pounds.\n\n", kilograms, kilograms_to_pounds(kilograms));
+                printf("\n%.2f kilograms is equal to %.2f pounds.\n\n", kilograms, kilograms_to_pounds(kilograms));
                 break;
             case 3:
                 ounces_to_grams_menu();
                 float ounces = get_value();
-                printf("%.2f ounces is equal to %.2f grams.\n\n", ounces, ounces_to_grams(ounces));
+                printf("\n%.2f ounces is equal to %.2f grams.\n\n", ounces, ounces_to_grams(ounces));
                 break;
             case 4:
                 printf("Returning to main menu.\n\n");

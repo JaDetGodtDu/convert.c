@@ -10,9 +10,7 @@ int main(){
         display_intro();
         display_menu();
 
-        printf("Please enter your choice: ");
-        choice = get_choice();
-        printf("You chose: %d\n", choice);
+        choice = choice_menu();
 
         switch(choice){
             case 1:

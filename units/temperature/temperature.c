@@ -18,17 +18,17 @@ void temperature_main(){
             case 1:
                 celsius_to_fahrenheit_menu();
                 celsius = get_value();
-                printf("%.2f degrees Celsius is equal to %.2f degrees Fahrenheit.\n\n", celsius, celsius_to_fahrenheit(celsius));
+                printf("\n%.2f degrees Celsius is equal to %.2f degrees Fahrenheit.\n\n", celsius, celsius_to_fahrenheit(celsius));
                 break;
             case 2:
                 fahrenheit_to_celsius_menu();
                 float fahrenheit = get_value();
-                printf("%.2f degrees Fahrenheit is equal to %.2f degrees Celsius.\n\n", fahrenheit, fahrenheit_to_celsius(fahrenheit));
+                printf("\n%.2f degrees Fahrenheit is equal to %.2f degrees Celsius.\n\n", fahrenheit, fahrenheit_to_celsius(fahrenheit));
                 break;
             case 3:
                 celsius_to_kelvin_menu();
                 celsius = get_value();
-                printf("%.2f degrees Celsius is equal to %.2f Kelvin.\n\n", celsius, celsius_to_kelvin(celsius));
+                printf("\n%.2f degrees Celsius is equal to %.2f Kelvin.\n\n", celsius, celsius_to_kelvin(celsius));
                 break;
             case 4:
                 printf("Returning to main menu.\n\n");
