@@ -15,6 +15,8 @@ You can either make use of the makefile included in this repository with the fol
         $ make
 
     For running the program:
+        $ make run
+    or simply:
         $ ./conv
 
     For cleaning up the program folder(s) after use:
