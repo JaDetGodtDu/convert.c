@@ -30,7 +30,7 @@ void weight_main(){
                 printf("%.2f ounces is equal to %.2f grams.\n\n", ounces, ounces_to_grams(ounces));
                 break;
             case 4:
-                printf("Returning to main menu.\n");
+                printf("Returning to main menu.\n\n");
                 break;
             default:
                 printf("Invalid choice. Please try again.\n");

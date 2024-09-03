@@ -30,7 +30,7 @@ void distance_main(){
                 printf("%.2f feet is equal to %.2f meters.\n\n", feet, feet_to_meters(feet));
                 break;
             case 4:
-                printf("Returning to main menu.\n");
+                printf("Returning to main menu.\n\n");
                 break;
             default:
                 printf("Invalid choice. Please try again.\n");

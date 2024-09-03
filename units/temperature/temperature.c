@@ -31,7 +31,7 @@ void temperature_main(){
                 printf("%.2f degrees Celsius is equal to %.2f Kelvin.\n\n", celsius, celsius_to_kelvin(celsius));
                 break;
             case 4:
-                printf("Returning to main menu.\n");
+                printf("Returning to main menu.\n\n");
                 break;
             default:
                 printf("Invalid choice. Please try again.\n");
