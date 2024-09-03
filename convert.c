@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "convert.h"
 #include "units/distance/distance.h"
+#include "units/temperature/temperature.h"
 
 int main(){
     int choice;
@@ -16,6 +17,9 @@ int main(){
         case 1:
             distance_main();
             break;
+        case 2:
+            temperature_main();
+            break;        
         case 4:
             printf("Exiting program.\n");
             printf("Goodbye!\n");

@@ -1,3 +1,50 @@
 #include <stdio.h>
 #include "temperature.h"
 #include "../../convert.h"
+
+float celsius_to_fahrenheit(float celsius);
+float fahrenheit_to_celsius(float fahrenheit);
+float celsius_to_kelvin(float celsius);
+
+void temperature_main(){
+    int choice;
+    float celsius;
+    do {
+        display_temperature_menu();
+
+        choice = choice_menu();
+
+        switch(choice) {
+            case 1:
+                celsius_to_fahrenheit_menu();
+                celsius = get_value();
+                printf("%.2f degrees Celsius is equal to %.2f degrees Fahrenheit.\n\n", celsius, celsius_to_fahrenheit(celsius));
+                break;
+            case 2:
+                fahrenheit_to_celsius_menu();
+                float fahrenheit = get_value();
+                printf("%.2f degrees Fahrenheit is equal to %.2f degrees Celsius.\n\n", fahrenheit, fahrenheit_to_celsius(fahrenheit));
+                break;
+            case 3:
+                celsius_to_kelvin_menu();
+                celsius = get_value();
+                printf("%.2f degrees Celsius is equal to %.2f Kelvin.\n\n", celsius, celsius_to_kelvin(celsius));
+                break;
+            case 4:
+                printf("Returning to main menu.\n");
+                break;
+            default:
+                printf("Invalid choice. Please try again.\n");
+                break;
+        }
+    } while(choice != 4);
+}
+float celsius_to_fahrenheit(float celsius){
+    return celsius * 9/5 + 32;
+}
+float fahrenheit_to_celsius(float fahrenheit){
+    return (fahrenheit - 32) * 5/9;
+}
+float celsius_to_kelvin(float celsius){
+    return celsius + 273.15;
+}

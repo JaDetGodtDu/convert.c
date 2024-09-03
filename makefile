@@ -8,7 +8,9 @@ TARGET = conv
 SRCS =  convert.c \
 		convert_ui.c \
 		units/distance/distance.c \
-		units/distance/distance_ui.c
+		units/distance/distance_ui.c \
+		units/temperature/temperature.c \
+		units/temperature/temperature_ui.c \
 
 #Defines the object files
 OBJS = $(SRCS:.c=.o)
