@@ -18,3 +18,16 @@ int get_choice()
     scanf("%d", &choice);
     return choice;
 }
+int choice_menu(){
+    int choice;
+    printf("Please enter your choice: ");
+    choice = get_choice();
+    printf("You chose: %d\n", choice);
+    return choice;
+}
+float get_value()
+{
+    float value;
+    scanf("%f", &value);
+    return value;
+}

@@ -13,3 +13,13 @@ void miles_to_kilometers_menu(){
     printf("==============================\n");
     printf("Please enter the number of miles: ");
 }
+void kilometers_to_miles_menu(){
+    printf("Kilometers to Miles Conversion\n");
+    printf("==============================\n");
+    printf("Please enter the number of kilometers: ");
+}
+void feet_to_meters_menu(){
+    printf("Feet to Meters Conversion\n");
+    printf("=========================\n");
+    printf("Please enter the number of feet: ");
+}

@@ -3,12 +3,13 @@
 #include "units/distance/distance.h"
 
 int main(){
+    int choice;
+    do {
     display_intro();
-
     display_menu();
 
     printf("Please enter your choice: ");
-    int choice = get_choice();
+    choice = get_choice();
     printf("You chose: %d\n", choice);
 
     switch(choice){
@@ -22,6 +23,7 @@ int main(){
         default:
             printf("Invalid choice. Please try again.\n");
             break;
-    } while (choice != 4);
+    } 
+} while (choice != 4);
     return 0;
 }
