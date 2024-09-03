@@ -8,7 +8,8 @@ void display_weight_menu() {
     printf("1. Pounds to Kilograms\n");
     printf("2. Kilograms to Pounds\n");
     printf("3. Ounces to Grams\n");
-    printf("4. Back to Main Menu\n");
+    printf("4. Grams to Ounces\n");
+    printf("5. Back to Main Menu\n");
 }
 void pounds_to_kilograms_menu(){
     printf("===================================\n");
@@ -27,4 +28,10 @@ void ounces_to_grams_menu(){
     printf("Ounces to Grams Conversion\n");
     printf("===================================\n\n");
     printf("Please enter the number of ounces: ");
+}
+void grams_to_ounces_menu(){
+    printf("===================================\n");
+    printf("Grams to Ounces Conversion\n");
+    printf("===================================\n\n");
+    printf("Please enter the number of grams: ");
 }
