@@ -1,5 +1,10 @@
 # Unit Conversion Program
 
+## Conversion of distance, temperature and weight
+
+### Really good terminal program, with great scalability and ease of use
+
+#### Many advanced conversion. Much WOW!
 
 For compiling and running this program, you will need to have GCC installed.
 I run it locally on a windows machine with chocolatey installed.
@@ -23,7 +28,7 @@ gcc -c convert.c -o convert.o && gcc -c convert_ui.c -o convert_ui.o && gcc -c u
 ```
 
 <br>
-It will be compile into a file called conv.exe. <br>
+It will be compiled into a file called conv.exe. <br>
 Type this line into your terminal to run the .exe file:
 
 ```sh
