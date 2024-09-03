@@ -5,6 +5,7 @@
 float miles_to_kilometers(float miles);
 float kilometers_to_miles(float kilometers);
 float feet_to_meters(float feet);
+float meters_to_feet(float meters);
 
 void distance_main(){
     int choice;
@@ -30,13 +31,18 @@ void distance_main(){
                 printf("\n%.2f feet is equal to \033[4m%.2f\033[0m meters.\n\n", feet, feet_to_meters(feet));
                 break;
             case 4:
+                meters_to_feet_menu();
+                float meters = get_value();
+                printf("\n%.2f meters is equal to \033[4m%.2f\033[0m feet.\n\n", meters, meters_to_feet(meters));
+                break;
+            case 5:
                 printf("Returning to main menu.\n\n");
                 break;
             default:
                 printf("Invalid choice. Please try again.\n");
                 break;
         }
-    } while(choice != 4);
+    } while(choice != 5);
 }
 
 float miles_to_kilometers(float miles){
@@ -49,4 +55,8 @@ float kilometers_to_miles(float kilometers){
 
 float feet_to_meters(float feet){
     return feet / 3.28084;
+}
+
+float meters_to_feet(float meters){
+    return meters * 3.28084;
 }
