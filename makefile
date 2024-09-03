@@ -11,6 +11,8 @@ SRCS =  convert.c \
 		units/distance/distance_ui.c \
 		units/temperature/temperature.c \
 		units/temperature/temperature_ui.c \
+		units/weight/weight.c \
+		units/weight/weight_ui.c \
 
 #Defines the object files
 OBJS = $(SRCS:.c=.o)
