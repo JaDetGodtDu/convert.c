@@ -13,18 +13,25 @@ void display_menu(){
     printf("    3. Convert units of weight\n");
     printf("    4. Quit the program\n");
 }
-int get_choice()
+char* get_choice()
 {
-    int choice;
-    scanf("%d", &choice);
+    static char choice[10];
+    scanf("%9s", choice);
     return choice;
 }
-int choice_menu(){
+int choice_menu() {
+    char* choice_str = get_choice();
     int choice;
-    printf("\nPlease enter your choice: ");
-    choice = get_choice();
-    printf("\nYou chose: %d\n\n", choice);
-    return choice;
+
+    // Try to convert the choice to an integer
+    if (sscanf(choice_str, "%d", &choice) == 1) {
+        printf("\nYou chose: %d\n\n", choice);
+        return choice;
+    } else {
+        // If it's not an integer, return the first character
+        printf("\nYou chose: %c\n\n", choice_str[0]);
+        return choice_str[0];
+    }
 }
 float get_value()
 {

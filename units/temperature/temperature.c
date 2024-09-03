@@ -16,36 +16,35 @@ void temperature_main(){
         display_temperature_menu();
 
         choice = choice_menu();
-
-        switch(choice) {
-            case 1:
-                celsius_to_fahrenheit_menu();
-                celsius = get_value();
-                printf("\n%.2f degrees Celsius is equal to \033[4m%.2f\033[0m degrees Fahrenheit.\n\n", celsius, celsius_to_fahrenheit(celsius));
-                break;
-            case 2:
-                fahrenheit_to_celsius_menu();
-                fahrenheit = get_value();
-                printf("\n%.2f degrees Fahrenheit is equal to \033[4m%.2f\033[0m degrees Celsius.\n\n", fahrenheit, fahrenheit_to_celsius(fahrenheit));
-                break;
-            case 3:
-                celsius_to_kelvin_menu();
-                celsius = get_value();
-                printf("\n%.2f degrees Celsius is equal to \033[4m%.2f\033[0m Kelvin.\n\n", celsius, celsius_to_kelvin(celsius));
-                break;
-            case 4:
-                kelvin_to_celsius_menu();
-                kelvin = get_value();
-                printf("\n%.2f Kelvin is equal to \033[4m%.2f\033[0m degrees Celsius.\n\n", kelvin, kelvin_to_celsius(kelvin));
-                break;
-            case 5:
-                printf("Returning to main menu.\n\n");
-                break;
-            default:
-                printf("Invalid choice. Please try again.\n");
-                break;
+        if (choice=='a')
+        {
+            celsius_to_fahrenheit_menu();
+            celsius = get_value();
+            printf("\n%.2f degrees Celsius is equal to \033[4m%.2f\033[0m degrees Fahrenheit.\n\n", celsius, celsius_to_fahrenheit(celsius));
         }
-    } while(choice != 5);
+        else if (choice=='b')
+        {
+            fahrenheit_to_celsius_menu();
+            fahrenheit = get_value();
+            printf("\n%.2f degrees Fahrenheit is equal to \033[4m%.2f\033[0m degrees Celsius.\n\n", fahrenheit, fahrenheit_to_celsius(fahrenheit));
+        }
+        else if (choice=='c')
+        {
+            celsius_to_kelvin_menu();
+            celsius = get_value();
+            printf("\n%.2f degrees Celsius is equal to \033[4m%.2f\033[0m Kelvin.\n\n", celsius, celsius_to_kelvin(celsius));
+        }
+        else if (choice=='d')
+        {
+            kelvin_to_celsius_menu();
+            kelvin = get_value();
+            printf("\n%.2f Kelvin is equal to \033[4m%.2f\033[0m degrees Celsius.\n\n", kelvin, kelvin_to_celsius(kelvin));
+        }
+        else if (choice=='x')
+        {
+            printf("Returning to main menu.\n\n");
+        }
+    } while(choice != 'x');
 }
 float celsius_to_fahrenheit(float celsius){
     return celsius * 9/5 + 32;

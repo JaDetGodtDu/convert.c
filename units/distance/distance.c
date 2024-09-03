@@ -17,36 +17,31 @@ void distance_main(){
         display_distance_menu();
 
         choice = choice_menu();
-
-        switch(choice) {
-            case 1:
-                miles_to_kilometers_menu();
-                miles = get_value();
-                printf("\n%.2f miles is equal to \033[4m%.2f\033[0m kilometers.\n\n", miles, miles_to_kilometers(miles));
-                break;
-            case 2:
-                kilometers_to_miles_menu();
-                kilometers = get_value();
-                printf("\n%.2f kilometers is equal to \033[4m%.2f\033[0m miles.\n\n", kilometers, kilometers_to_miles(kilometers));
-                break;
-            case 3:
-                feet_to_meters_menu();
-                feet = get_value();
-                printf("\n%.2f feet is equal to \033[4m%.2f\033[0m meters.\n\n", feet, feet_to_meters(feet));
-                break;
-            case 4:
-                meters_to_feet_menu();
-                meters = get_value();
-                printf("\n%.2f meters is equal to \033[4m%.2f\033[0m feet.\n\n", meters, meters_to_feet(meters));
-                break;
-            case 5:
-                printf("Returning to main menu.\n\n");
-                break;
-            default:
-                printf("Invalid choice. Please try again.\n");
-                break;
+        if(choice=='a')
+        {
+            miles_to_kilometers_menu();
+            miles = get_value();
+            printf("\n%.2f miles is equal to \033[4m%.2f\033[0m kilometers.\n\n", miles, miles_to_kilometers(miles));
         }
-    } while(choice != 5);
+        else if(choice=='b'){
+            kilometers_to_miles_menu();
+            kilometers = get_value();
+            printf("\n%.2f kilometers is equal to \033[4m%.2f\033[0m miles.\n\n", kilometers, kilometers_to_miles(kilometers));
+        }
+        else if(choice=='c'){
+            feet_to_meters_menu();
+            feet = get_value();
+            printf("\n%.2f feet is equal to \033[4m%.2f\033[0m meters.\n\n", feet, feet_to_meters(feet));
+        }
+        else if(choice=='d'){
+            meters_to_feet_menu();
+            meters = get_value();
+            printf("\n%.2f meters is equal to \033[4m%.2f\033[0m feet.\n\n", meters, meters_to_feet(meters));
+        }
+        else if(choice=='x'){
+            printf("Returning to main menu.\n\n");
+        }
+    } while(choice != 'x');
 }
 
 float miles_to_kilometers(float miles){

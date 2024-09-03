@@ -4,11 +4,11 @@ void display_distance_menu() {
     printf("===================================\n");
     printf("Distance Conversion Menu\n");
     printf("===================================\n");
-    printf("1. Miles to Kilometers\n");
-    printf("2. Kilometers to Miles\n");
-    printf("3. Feet to Meters\n");
-    printf("4. Meters to Feet\n");
-    printf("5. Back to Main Menu\n");
+    printf("a. Miles to Kilometers\n");
+    printf("b. Kilometers to Miles\n");
+    printf("c. Feet to Meters\n");
+    printf("d. Meters to Feet\n");
+    printf("x. Back to Main Menu\n");
 }
 void miles_to_kilometers_menu(){
     printf("===================================\n");

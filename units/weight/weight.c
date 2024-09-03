@@ -18,36 +18,39 @@ void weight_main(){
         display_weight_menu();
 
         choice = choice_menu();
-
-        switch(choice) {
-            case 1:
-                pounds_to_kilograms_menu();
-                pounds = get_value();
-                printf("\n%.2f pounds is equal to \033[4m%.2f\033[0m kilograms.\n\n", pounds, pounds_to_kilograms(pounds));
-                break;
-            case 2:
-                kilograms_to_pounds_menu();
-                kilograms = get_value();
-                printf("\n%.2f kilograms is equal to \033[4m%.2f\033[0m pounds.\n\n", kilograms, kilograms_to_pounds(kilograms));
-                break;
-            case 3:
-                ounces_to_grams_menu();
-                ounces = get_value();
-                printf("\n%.2f ounces is equal to \033[4m%.2f\033[0m grams.\n\n", ounces, ounces_to_grams(ounces));
-                break;
-            case 4:
-                grams_to_ounces_menu();
-                grams = get_value();
-                printf("\n%.2f grams is equal to \033[4m%.2f\033[0m ounces.\n\n", grams, grams_to_ounces(grams));
-                break;
-            case 5:
-                printf("Returning to main menu.\n\n");
-                break;
-            default:
-                printf("Invalid choice. Please try again.\n");
-                break;
+        if (choice=='a')
+        {
+            pounds_to_kilograms_menu();
+            pounds = get_value();
+            printf("\n%.2f pounds is equal to \033[4m%.2f\033[0m kilograms.\n\n", pounds, pounds_to_kilograms(pounds));
         }
-    } while(choice != 5);
+        else if (choice=='b')
+        {
+            kilograms_to_pounds_menu();
+            kilograms = get_value();
+            printf("\n%.2f kilograms is equal to \033[4m%.2f\033[0m pounds.\n\n", kilograms, kilograms_to_pounds(kilograms));
+        }
+        else if (choice=='c')
+        {
+            ounces_to_grams_menu();
+            ounces = get_value();
+            printf("\n%.2f ounces is equal to \033[4m%.2f\033[0m grams.\n\n", ounces, ounces_to_grams(ounces));
+        }
+        else if (choice=='d')
+        {
+            grams_to_ounces_menu();
+            grams = get_value();
+            printf("\n%.2f grams is equal to \033[4m%.2f\033[0m ounces.\n\n", grams, grams_to_ounces(grams));
+        }
+        else if (choice=='x')
+        {
+            printf("Returning to main menu.\n\n");
+        }
+        else
+        {
+            printf("Invalid choice. Please try again.\n");
+        }
+    } while(choice != 'x');
 };
 float pounds_to_kilograms(float pounds){
     return pounds / 2.20462;

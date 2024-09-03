@@ -5,11 +5,11 @@ void display_weight_menu() {
     printf("===================================\n");
     printf("Weight Conversion Menu\n");
     printf("===================================\n");
-    printf("1. Pounds to Kilograms\n");
-    printf("2. Kilograms to Pounds\n");
-    printf("3. Ounces to Grams\n");
-    printf("4. Grams to Ounces\n");
-    printf("5. Back to Main Menu\n");
+    printf("a. Pounds to Kilograms\n");
+    printf("b. Kilograms to Pounds\n");
+    printf("c. Ounces to Grams\n");
+    printf("d. Grams to Ounces\n");
+    printf("x. Back to Main Menu\n");
 }
 void pounds_to_kilograms_menu(){
     printf("===================================\n");

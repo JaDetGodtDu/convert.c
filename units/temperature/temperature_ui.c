@@ -4,11 +4,11 @@ void display_temperature_menu() {
     printf("===================================\n");
     printf("Temperature Conversion Menu\n");
     printf("===================================\n");
-    printf("1. Celsius to Fahrenheit\n");
-    printf("2. Fahrenheit to Celsius\n");
-    printf("3. Celsius to Kelvin\n");
-    printf("4. Kelvin to Celsius\n");
-    printf("5. Back to Main Menu\n");
+    printf("a. Celsius to Fahrenheit\n");
+    printf("b. Fahrenheit to Celsius\n");
+    printf("c. Celsius to Kelvin\n");
+    printf("d. Kelvin to Celsius\n");
+    printf("x. Back to Main Menu\n");
 }
 void celsius_to_fahrenheit_menu(){
     printf("===================================\n");
