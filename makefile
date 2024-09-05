@@ -3,7 +3,7 @@
 CC = gcc 
 
 # Defines the name of the target executable file
-TARGET = conv 
+TARGET = build/conv 
 
 # Defines the source files to be compiled
 SRCS =  convert.c \
@@ -16,11 +16,14 @@ SRCS =  convert.c \
         units/weight/weight_ui.c \
 #================================================================
 
-# Defines the object files by replacing .c with .o in the source files
-OBJS = $(SRCS:.c=.o)
+# Defines the object files by replacing .c with .o in the source files and adding the build directory
+OBJS = $(patsubst %.c, build/%.o, $(SRCS))
 
 # Defines the flags to be passed to the compiler
 CFLAGS = -Wall -Wextra -Werror
+
+# Create the build directory, if it does not exist
+$(shell mkdir -p build/units/distance build/units/temperature build/units/weight)
 
 # Defines the default target, which is the executable file
 $(TARGET): $(OBJS)
@@ -28,7 +31,7 @@ $(TARGET): $(OBJS)
 	$(CC) $(OBJS) -o $(TARGET)
 
 # Defines the rule to compile .c files into .o object files
-%.exe: %.c
+build/%.o: %.c
     # Compiles the source file into an object file with the specified flags
 	$(CC) $(CFLAGS) -c $< -o $@
 
@@ -40,4 +43,5 @@ run: $(TARGET)
 # Defines the rule to clean the object files and the target executable
 clean:
     # Removes the object files and the executable
-	rm -f $(OBJS) $(TARGET)
+	rm -rf build
+    # rm -f $(OBJS) $(TARGET)
